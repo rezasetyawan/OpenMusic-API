@@ -1,7 +1,7 @@
 const {nanoid} = require('nanoid');
 const {Pool} = require('pg');
 const InvariantError = require('../../exceptions/InvariantError');
-const NotFoundError = require('../../exceptions/NotFound');
+const NotFoundError = require('../../exceptions/NotFoundError');
 
 class AlbumsService {
   constructor() {
@@ -9,7 +9,7 @@ class AlbumsService {
   }
 
   async addAlbum({name, year}) {
-    const id = `{album-${nanoid(16)}}`;
+    const id = `album-${nanoid(16)}`;
 
     const query = {
       text: 'INSERT INTO albums VALUES($1, $2, $3) RETURNING id',

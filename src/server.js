@@ -176,7 +176,7 @@ const init = async () => {
 
       const newResponse = h.response({
         status: 'error',
-        message: 'Sorry, there was a failure on our server :(',
+        message: 'Sorry, there was a failure on our server',
       });
 
       newResponse.code(500);

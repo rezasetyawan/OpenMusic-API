@@ -187,7 +187,7 @@ const init = async () => {
   });
 
   await server.start();
-  console.log(`Server running on ${server.info.uri}`);
+  console.log(`Server running on this url${server.info.uri}`);
 };
 
 init();
